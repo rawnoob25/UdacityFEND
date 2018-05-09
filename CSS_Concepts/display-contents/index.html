@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+	.a {
+	  /*display: con
+	  border: 1px solid red;
+	  background-color: lightgrey;
+	  padding: 10px;
+	  width: 200px;
+	}
+	.b {
+	  border: 1px solid blue;
+	  background-color: lightblue;
+	  padding: 10px;
+	}
+	</style>
+</head>
+<body>
+	<h1>The display Property</h1>
+	<h2>display: contents:</h2>
+	<div id='desc'>
+		When the display of an element (call it 'a') is specified as <code>contents</code>, then all child elements of the element 'a' 
+		(element 'b' is one such element) will become children of the element that's one level up from 'a' in the DOM; so, 
+		here 'b' will become a child of the parent of element 'a' (in this case, the parent of element 'a' is the document itself). In effect,
+		the styles applied to element 'a' will be disregarded.
+	</div>
+	<div class="a">
+	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam at erat pulvinar, at pulvinar felis blandit. <div class="b">HELLO WORLD!</div> Vestibulum volutpat tellus diam, consequat gravida libero rhoncus ut.
+	</div>
+
+	<p>display: contents does not work in Edge/Internet Explorer.</p>
+</body>
+</html>

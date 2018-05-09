@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>A grid container as containing block</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout -->
+<div id='heading' style='font-size:100px;'>
+  THIS IS A TEST.
+</div>
+<div class="wrapper">
+  <div class="box1">One</div>
+  <div class="box2">Two</div>
+  <div class="box3">
+   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated  from the outer edges of the area it has been placed into. Please note that the aforementioned containing block has relative positioning.
+  </div>
+  <div class="box4">Four</div>
+</div>
+  
+  
+
+</body>
+
+</html>

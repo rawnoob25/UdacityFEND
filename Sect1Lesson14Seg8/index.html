@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Another Layout Shifter</title>
+        <style>
+		    .box {
+		    	height:100px;
+		    }
+		    #container {
+		    	width: 100%;
+		    	display: flex;
+		    	flex-wrap: wrap;
+		    }
+		    #dark-blue {
+		    	background-color:rgb(5, 34, 81);
+		    	width:100%;
+		    }
+		    #light-blue {
+		    	background-color:rgb(15, 133, 224);
+		    	width:100%;
+		    	height:50%;
+		    }
+		    #dark-green {
+		    	background-color:rgb(20, 76, 17); 
+		    	width:100%;
+		    	height:50%;
+		    }
+		    #red {
+			    background-color:rgb(216, 12, 8);
+			    width:100%;	
+		    }
+		    #inner-container {
+		    	width:100%;
+		    	height:200px;
+		    }
+
+		    @media screen and (min-width: 500px) {
+		    	#red {
+		    		order:-1;
+		    		height:200px;
+		    		width:50%;
+		    	}
+		    	#inner-container {
+/*		    		order:2;
+*/		    		width:50%;
+		    		height:200px;
+		    	}
+		    	#dark-blue {
+		    		order:3;
+		    		width:100%;
+		    		height:100px;
+		    	}
+		    }
+
+		    @media screen and (min-width: 600px) {
+		    	#container {
+		    		height:200px;
+		    		width:100%;	
+		    	}
+		    	#inner-container {
+		    		width:50%;
+		    		height:100%;
+		    	}
+		    	#red {
+		    		order:1;
+		    		width:25%;
+		    		height:100%;
+		    	}
+		    	#dark-blue {
+		    		order:2;
+		    		width:25%;
+		    		height:100%;
+		    	}
+		    }
+	    </style>
+    </head>
+    <body>
+  	    <p style='font-size:1.5em; font-weight:bold'>
+  	    <div id='container'>
+	  	    <div id='dark-blue' class='box'>
+  		    </div>
+  		    <div id='inner-container'>
+	  		    <div id='light-blue' class='box'>
+			    </div>
+				<div id='dark-green' class='box'>
+				</div>
+			</div>
+			<div id='red' class='box'>
+			</div>
+	  </div>
+  </body>
+</html>

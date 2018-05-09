@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Alignment in CSS Grids</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    code {
+    	color: red;
+    }
+    p {
+    	font-weight:bold; 
+    	font-size:1.5em; 
+    	font-style:italic;
+    }
+  </style>
+</head>
+<body>
+  <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout -->
+	<div id = 'desc'>
+		<p>Notice how box 1 is stretched (specified in its CSS), box
+			2 is aligned at the top (specified in its CSS), and box 3 is aligned at the end. <code>align-items: end;</code>
+			in the style for class <code>wrapper</code> makes this happen.</p>
+		<p>
+		</p>
+	</div>
+	<div class="wrapper">
+	  <div class="box1">One</div>
+	  <div class="box2">Two</div>
+	  <div class="box3">Three</div>
+	</div>
+</body>
+</html>

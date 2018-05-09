@@ -1,0 +1,131 @@
+<!--
+NOTE:COMMENTEDLINES BEGINNING WITH 
+'!!!' DENOTE ITEMS STILL REQUIRING CONSIDERATION/FIXING. 
+-->
+
+
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Layout Shifter</title>
+    <style>
+	    #picDiv {
+	    	width: 80%;
+/*	    	border: 4px solid black;
+*/	    	margin-left: auto;
+	    	margin-right: auto;
+	    }
+	    #pic {
+	    	width: 100%;
+	    }
+	    #desc>p, #clarification>p {
+	    	font-size:1.5em;
+	    	font-weight:bold;
+	    }
+	    #container {
+	    	width: 100%;
+	    	display: flex;
+	    	flex-wrap: wrap;
+	    }
+	    #inner-container {
+	    	width: 100%;
+	    }
+/*
+!!!The box height specified below is a placeholder.
+If no box height is specified, nothing renders.
+*/
+	    .box {
+	    	height:100px;
+	    }
+	    #dark-blue {
+	    	background-color:rgb(5, 34, 81);
+	    	width:100%;
+	    }
+	    #light-blue {
+	    	background-color:rgb(15, 133, 224);
+	    	width:100%;
+	    }
+	    #dark-green {
+	    	background-color:rgb(20, 76, 17); 
+	    	width:100%;
+	    }
+	    #red {
+		    background-color:rgb(216, 12, 8);
+		    width:100%;	
+	    }
+	    
+	    @media screen and (min-width: 500px) {
+	    	#dark-blue {
+	    		width:50%;
+/*
+!!!I hardcoded the height. I don't believe that 
+I should have had to do this. I'm thinking that
+the 'display:flex' and 'flex-wrap:wrap' should
+have taken care of this for me. 
+*/
+	    		height:200px;
+	    	}
+	    	#inner-container {
+	    		width:50%;
+	    	}
+	    }
+
+/*
+!!!Below media query has too much stuff hardcoded and needs to be completely redone.
+*/
+	    @media screen and (min-width: 600px) {
+	    	#red {
+	    		order:1;
+	    		width:25%;
+	    		height:200px;
+	    	}
+	    	#dark-blue {
+	    		order:3;
+	    		width:25%;
+	    		height:200px;
+	    	}
+	    	#inner-container {
+	    		order:2;
+	    	}
+	    }
+
+	</style>
+  </head>
+  <body>
+  	  <div id='desc'>
+  	  	<p>The goal of this exercise is to have the main content of the page
+  	  	look like one of the images below- the image the main page content looks like will depend on the width of the viewport.</p>
+  	  </div>
+<!-- 
+!!!Why doesn't commented out code chunk below make figure (including both img and figcaption tags) fill its containing div? 
+fill its border?
+-->
+<!--   	  <div id='picDiv'>
+	  	  <figure id='pic'>
+			  <img  src='layoutsRev.PNG' alt='layouts'>
+			  <figcaption>The three layout possibilities for the main content of the page</figcaption>
+		  </figure>		
+	  </div> -->
+	  <div id='picDiv'>
+		  <img id='pic' src='layoutsRev.PNG' alt='layouts'>
+	  </div>
+	  <div id='clarification'>
+	  	<p>
+	  		The two breakpoints we'll use are 500px and 600px.
+  		</p>
+	  </div>
+	  <div id='container'>
+	  	<div id='dark-blue' class='box'>
+  		</div>
+  		<div id='inner-container'>
+	  		<div id='light-blue' class='box'>
+			</div>
+			<div id='dark-green' class='box'>
+			</div>
+		</div>
+		<div id='red' class='box'>
+		</div>
+	  </div>
+  </body>
+</html>

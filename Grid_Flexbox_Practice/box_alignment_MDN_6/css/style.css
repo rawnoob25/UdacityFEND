@@ -1,0 +1,36 @@
+* {box-sizing: border-box;}
+
+.wrapper {
+  border: 2px solid #f76707;
+  border-radius: 5px;
+  background-color: #fff4e6;
+}
+
+.wrapper > div {
+  border: 2px solid #ffa94d;
+  border-radius: 5px;
+  background-color: #ffd8a8;
+  padding: 1em;
+  color: #d9480f;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-auto-rows: 200px;
+  grid-gap: 20px;
+  /*position: relative; */
+}
+.box3 {
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  position: absolute; 
+  top: 40px;
+  left: 40px;
+  /*There's no gap left by the absolutely positioned box (i.e. it's taken 
+  out of its normal posn in the document flow), and the box does not span until 
+  row grid line 3 (it only spans vertically as much as the content dictates- 
+  though it's horizontally bounded by column grid-line 4). The top/left
+  margins are relative to grid-row 1 and grid-column 2.  */
+}

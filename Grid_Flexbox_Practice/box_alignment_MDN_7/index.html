@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>With a grid area as the parent</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #desc>p {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout -->
+  <div id='desc'>
+    <p>
+    In this situation, we hav a div that's positioned absolute; however its containing (parent) div is not the outermost container.
+    The containing div is positioned relative (as expected), and the outermost container (class <code>wrapper</code> in the code)
+    is positioned static (i.e. it's given no position). Box Three is the box that's positioned relative.
+    </p>  
+  </div>
+  <div class="wrapper">
+    <div class="box1">One</div>
+    <div class="box2">Two</div>
+    <div class="box3">Three
+      <div class="abspos">
+       This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated from the outer edges of the grid area.
+      </div>
+    </div>
+    <div class="box4">Four</div>
+  </div>
+</body>
+
+</html>

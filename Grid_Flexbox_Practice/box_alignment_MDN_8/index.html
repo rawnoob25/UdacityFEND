@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Display:contents using grid
+  </title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    #desc>p {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout -->
+  <div id='desc'>
+    <p>
+      Watch what happens to to both the box with class <code>box1</code> and the nested divs when you 
+      add <code style='color:red;'>display:contents;</code> to the style for class <code>box1</code>. 
+    </p>
+  </div>
+  <div class="wrapper">
+    <div class="box box1">
+      <div class="nested">a</div>
+      <div class="nested">b</div>
+      <div class="nested">c</div>
+    </div>
+    <div class="box box2">Two</div>
+    <div class="box box3">Three</div>
+    <div class="box box4">Four</div>
+    <div class="box box5">Five</div>
+  </div>
+</body>
+
+</html>

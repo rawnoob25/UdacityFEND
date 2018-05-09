@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flexbox eg</title>
+    <style>
+    	.container {
+    		width: 100%;
+    		display: flex;
+    		flex-wrap: wrap;
+    	}
+	    .box {
+	    	height: 70px;
+	    }
+	    .light-green {
+	    	background-color: rgb(153,193,65);
+	    	width: 100%;
+	    	order: 1;
+	    }
+	    .red {
+	    	background-color: rgb(255,0,0);
+	    	width: 50%;
+	    	order: 2;
+	    }
+	    .orange {
+	    	background-color: rgb(255,140,0);
+	    	width: 50%;
+	    	order: 3;
+	    }
+	    .aqua {
+	    	background-color: rgb(91,193,168);
+	    	width: 100%;
+	    	order: 4;
+	    }
+	    .light-blue {
+	    	background-color: rgb(81,173,226);
+	    	width: 20%;
+	    	order: 5;
+	    }
+	    .dark-blue {
+	    	background-color: rgb(46,47,102);
+	    	width: 60%;
+	    	order: 6;
+	    }
+	    .dark-green {
+	    	background-color: rgb(43,99,31);
+	    	width: 20%;
+	    	order: 7;
+	    }
+	</style>
+  </head>
+  <body>
+  	<div id='pic'>
+  		<img src = 'images/flexbox_eg1.PNG' alt='desired configuration'>
+  	</div>
+  	<div id='goal'>
+  		<p style='font-size: 1.5em; font-weight: bold; font-style: italic;'>Objective: make the configuration of boxes below
+  		look approximately like that in the picture above</p>
+  	</div>
+  	<div class='container'>
+  		<div class='red box'>
+  		</div>
+  		<div class='orange box'>
+  		</div>
+  		<div class='aqua box'>
+  		</div>
+  		<div class='dark-blue box'>
+  		</div>
+  		<div class='light-blue box'>
+  		</div>
+  		<div class='dark-green box'>
+  		</div>
+  		<div class='light-green box'>
+  		</div>
+    </div>
+  </body>
+</html>
