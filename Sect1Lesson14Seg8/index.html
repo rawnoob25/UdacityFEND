@@ -52,7 +52,11 @@
 		    		height:100px;
 		    	}
 		    }
-
+/*
+!!!When the min-width of the viewport is at least  600px,
+the dark-green div needs to appear above the light-blue div
+in the inner container. This is not happening.
+*/
 		    @media screen and (min-width: 600px) {
 		    	#container {
 		    		height:200px;
@@ -72,13 +76,22 @@
 		    		width:25%;
 		    		height:100%;
 		    	}
+		    	/*
+		    	#light-blue {
+		    		order:0;
+		    	}
+		    	*/
+		    	#dark-green {
+		    		order:-1;
+		    	}
 		    }
 	    </style>
     </head>
+    
     <body>
   	    <p style='font-size:1.5em; font-weight:bold'>
   	    <div id='container'>
-	  	    <div id='dark-blue' class='box'>
+	  	    <div id='red' class='box'>
   		    </div>
   		    <div id='inner-container'>
 	  		    <div id='light-blue' class='box'>
@@ -86,7 +99,7 @@
 				<div id='dark-green' class='box'>
 				</div>
 			</div>
-			<div id='red' class='box'>
+			<div id='dark-blue' class='box'>
 			</div>
 	  </div>
   </body>
