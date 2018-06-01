@@ -33,13 +33,17 @@
         margin-top:12px;
       }
       #drawer {
-        display: none; 
+        z-index:10; /*makes it appear in front of other elements*/
+        width:300px;
+        background:#fff;
+        position: absolute; /*this is rqd for below line to work*/
+        transform: translate(-300px, 0); 
         /*note to self: 'display:none' removes the space taken up by the elements in addtn to 
         removing them from the page; 'visibility:hidden' removes them from the page, but the space that they 
         took up will still be reserved (but visibly empty) space on the page*/
+        transition: transform 0.3s ease;
       }
       #bgr {
-        visibility:visible;
         display: inline;
         position: absolute;
         margin-top:12px;
@@ -48,7 +52,12 @@
         right:0;
       }
       #drawer.open {
-        display: block;
+        transform: translate(0, 0);
+      }
+      .nav__item {
+        display: list-item;
+        width:100%;
+        border-bottom:1px solid black;
       }
     }
     @media screen and (min-width: 550px){
