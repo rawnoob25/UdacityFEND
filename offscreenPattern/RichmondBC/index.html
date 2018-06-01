@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Richmond, BC</title>
+    <style>
+    	header {
+    		height: 100px;
+    		width:100%;
+    		box-shadow:0 2px #888;
+    		margin-bottom:20px;
+    	}
+    	#header_inner {
+    		width:100%;
+    	}
+    	#header_inner > #flag {
+    		vertical-align:top;
+    		margin-top:12px;
+    		margin-right:1em;
+    		width:20vw;
+    	}
+    	#header_inner > h1 {
+    		font-size:4vw;
+    		display:inline;
+    		vertical-align:top;
+    		margin-top:12px;
+    	}
+    	#header_inner > #expand {
+    		position:absolute;
+    		top:0;
+    		right:0;
+    		margin-top:12px;
+    		margin-right:1em;
+    	}
+    	main > #streetview_brighouse {
+    		width:100%;
+    		margin-bottom: 50px;
+    	}
+    	nav#menu {
+    		z-index:10;
+    		width:300px;
+    		position:absolute;
+    		transform:translate(-300px,0);
+    		transition:transform 0.3s ease;
+    	}
+    	nav#menu.open {
+    		transform:translate(0,0);
+    	}
+    	#menu_list {
+    		list-style:none;
+    		padding:0;
+    		margin:0;
+    	}
+    	.menu_item {
+    		display: list-item;
+    		width:100%;
+    		background:#fff;
+    		text-align:center;
+    		text-transform:uppercase;
+    	}
+    	.menu_item > a {
+    		color:#424242;
+    	}
+
+
+	</style>
+  </head>
+  <body>
+  	<header>
+  		<div id='header_inner'>
+  			<img src='./100px-Richmondbcflag.svg.png' alt='flag of Richmond,BC' id='flag'>
+  			<h1>Welcome to Richmond</h1>
+  			<span id='expand'>☰</span> 
+  		</div>
+  	</header>
+  	<nav id = 'menu'>
+  		<ul id = 'menu_list'>
+  			<li class='menu_item'><a href='#' target='_blank'>Demographics</a></li>
+  			<li class='menu_item'><a href='#' target='_blank'>Transportation</a></li>
+  			<li class='menu_item'><a href='#' target='_blank'>Shopping</a></li>
+  		</ul>
+  	</nav>
+
+  	<script>
+  		let expand = document.querySelector('#expand');
+  		let nav = document.querySelector('#menu');
+  		expand.addEventListener('click', function(e){
+  			nav.classList.toggle('open');
+  			e.stopPropagation();
+  		});
+  	</script>
+
+  	<main>
+  		<img src = './streetview_richmond_brighouse.PNG' alt='streetview near Richmond-Brighouse Skytrain station' id='streetview_brighouse'>
+  	</main>
+  	<footer>
+	  	<section id='issues'>
+	  			<h2>Issues</h2>
+	  			<ul>
+	  				<li>Are tops of header elements (flag pic, h1 tag and hamburger icon) flush with one another?</li>
+	  			</ul>
+		</section>
+	</footer>
+
+  </body>
+</html>
