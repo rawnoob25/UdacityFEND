@@ -49,11 +49,15 @@
       .hero, .weather {
         display:inline-block;
       }
-      .hero {
+/*      .hero {
+        width:70%;
+        order:1;
+      }*/
+      div.hero {
         width:70%;
         order:1;
       }
-      .weather {
+      div.weather {
         width:30%;
         order:2;
       }
@@ -64,6 +68,28 @@
         order:4;
       }
       .recent-news {
+        order:5;
+      }
+    }
+    @media only screen and (min-width: 700px) {
+      .hero, .top-news {
+        display:inline-block;
+      }
+      div.hero {
+        width:50%;
+        order:1;
+      }
+      div.top-news {
+        width:50%;
+        order:2;
+      }
+      div.scores {
+        order:3;
+      }
+      div.weather {
+        order:4;
+      }
+      div.recent-news {
         order:5;
       }
     }
@@ -94,6 +120,7 @@
     <script>
       let bgr = document.getElementById('bgr');
       bgr.addEventListener('click', function(e){
+        let drawer = document.getElementById('drawer');
         drawer.classList.toggle('open');
         e.stopPropagation();
       });
@@ -101,31 +128,33 @@
 
     <main>
       <section class="content">
-        <section class="hero">
-          <article class="description">
-            <h2>Absolutely astonishing breaking news!</h2>
-            <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
-          </article>
-        </section>
-
-        <section class="news top-news">
-          <h2 class="news__title">Top news <a href="#" class="news__more">+ more</a></h2>
-          <ul>
-            <li class="top-news__item">
-              <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
-            </li>
-            <li class="top-news__item">
-              <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
-            </li>
-          </ul>
-        </section>
-
+        <div class='hero'>      
+          <section class="hero">
+            <article class="description">
+              <h2>Absolutely astonishing breaking news!</h2>
+              <p>Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko. Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</p>
+            </article>
+          </section>
+        </div>
+        <div class='top-news'>
+          <section class="news top-news">
+            <h2 class="news__title">Top news <a href="#" class="news__more">+ more</a></h2>
+            <ul>
+              <li class="top-news__item">
+                <a href="#">Gastropub distillery Marfa farm-to-table, Etsy Truffaut fingerstache.</a>
+              </li>
+              <li class="top-news__item">
+                <a href="#">Squid lomo Kickstarter art lomo Kickstarter art party cronut scenester.</a>
+              </li>
+              <li class="top-news__item">
+                <a href="#">Organic raw denim lomo Kickstarter art Vice keffiyeh four loko.</a>
+              </li>
+              <li class="top-news__item">
+                <a href="#">Organic raw denim Vice keffiyeh lomo Kickstarter art lomo Kickstarter art four loko.</a>
+              </li>
+            </ul>
+          </section>
+        </div>
         <section class="scores">
           <table class="scores__table">
             <thead>
@@ -177,36 +206,38 @@
           </table>
         </section>
 
-        <section class="weather">
-          <span class="weather__location">Brighton, UK</span>
-          <span class="weather__desc">Sunny</span>
-          <span class="weather__today">
-          <img class="weather__today__image" src="images/weather.png" alt="icon of a partially sunny day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
-          </span>
-          <ul class="weather__next">
-            <li class="weather__next__item">
-              <span>Mon</span>
-              <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Tues</span>
-              <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Wed</span>
-              <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Thu</span>
-              <img class="weather__next__image" src="images/rain.png" alt="icon of a rainy day">
-              <span>13 &deg;C</span>
-            </li><li class="weather__next__item">
-              <span>Fri</span>
-              <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
-              <span>13 &deg;C</span>
-            </li>
-          </ul>
-        </section>
+        <div class='weather'>
+          <section class="weather">
+            <span class="weather__location">Brighton, UK</span>
+            <span class="weather__desc">Sunny</span>
+            <span class="weather__today">
+            <img class="weather__today__image" src="images/weather.png" alt="icon of a partially sunny day"><span class="weather__today__temp">13</span><span class="weather__today__deg">&deg;C</span>
+            </span>
+            <ul class="weather__next">
+              <li class="weather__next__item">
+                <span>Mon</span>
+                <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
+                <span>13 &deg;C</span>
+              </li><li class="weather__next__item">
+                <span>Tues</span>
+                <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
+                <span>13 &deg;C</span>
+              </li><li class="weather__next__item">
+                <span>Wed</span>
+                <img class="weather__next__image" src="images/cloudy.png" alt="icon of a cloudy day">
+                <span>13 &deg;C</span>
+              </li><li class="weather__next__item">
+                <span>Thu</span>
+                <img class="weather__next__image" src="images/rain.png" alt="icon of a rainy day">
+                <span>13 &deg;C</span>
+              </li><li class="weather__next__item">
+                <span>Fri</span>
+                <img class="weather__next__image" src="images/sunny.png" alt="icon of a sunny day">
+                <span>13 &deg;C</span>
+              </li>
+            </ul>
+          </section>
+        </div>
 
         <section class="news recent-news">
           <h2 class="news__title">Latest news <a href="#" class="news__more">+ more</a></h2>
