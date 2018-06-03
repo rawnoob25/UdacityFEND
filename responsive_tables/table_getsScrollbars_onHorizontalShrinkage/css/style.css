@@ -1,0 +1,21 @@
+      /*
+      style for td elements (below) ends up making the content area (excluding padding)
+      of the th element above each td element have a min-width of 75px.
+      */
+      td {
+        min-width: 75px;
+        text-align: center;
+      }
+      /*
+      style for th elements (below) ends up making the content area (excluding padding)
+      of the td elements below each th element have a min-width of 125px
+      */
+      th:first-of-type {
+        min-width: 125px;
+      }
+      div.tbl {
+        width: 50%; /*indicates the div holding the table (class='tbl') itself will 
+        occupy 50% of its container; the container in this case is the window*/
+        overflow-x: auto; /*indicates that the table itself (as opposed to the page)
+        will get horizontal scrollbars as neededs*/
+      }

@@ -1,0 +1,49 @@
+      table {
+        border: 1px solid #ddd;
+      }
+      /*
+      QUESTION: should below make
+      only odd numbered children
+      of each row to have backgrouund color #f9f9f9?
+
+      ANSWER: NO. it will actually make odd numbered rows
+      to have background color #f9f9f9.
+      */
+
+      /*
+      QUESTION: Below also appears to give thead the
+      background color #f9f9f9. Why is this so?;
+      */
+      tr:nth-child(odd) {
+        background-color: #f9f9f9;
+      }
+      @media screen and (max-width: 500px) {
+        table, thead, tbody, th, td, tr {
+          display: block;
+        }
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+        td { 
+          position: relative;
+          padding-left: 50%; 
+        }
+        
+        /*
+        NOTE: below selector
+        is 'td::before' in CSS3
+        and beyond; browsers, however,
+        still accept 'td:before'.
+        */
+        td:before { 
+          position: absolute;
+          left: 6px;
+          content: attr(data-th);
+          font-weight: bold;
+        }
+        td:first-of-type {
+          font-weight: bold;
+        }
+      }

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+  <head>
+    <meta charset="UTF-8">
+    <title>Centering single line of text within a div</title>
+  	<style>
+  		section#objective {
+  			box-shadow: 0 5px 5px #222;
+  		}
+  		section#objective>p {
+  			width:75vw;
+  			font-style:italic;
+  		}
+  		section#objective>p>ol {
+  			font-style: initial;
+  		}
+  		section#eg1>div {
+  			width:200px;
+  			height:100px;
+  			text-align:center; /*horizontally aligns text*/
+  			line-height: 100px;
+  			vertical-align:middle;
+  			background-color:yellow;
+  			/*below 2 lines center div horizontally within its container,
+  			but they aren't necessary for centering text within the div
+  			*/ 
+  			margin-left:auto;
+  			margin-right:auto;
+  		}
+  	</style>
+  </head>
+  <body>
+  	<section id = 'objective'>
+  		<p>
+  			When we have a div that holds a single line of 
+  			text, for example a div containing 'Hello world!',
+  			a simple way to center text- both vertically and horizontally
+  			- in the div is to set the following properties in the div:
+  			<ol>
+  				<li>give it width and height</li>
+  				<li>set <code>text-align:center</code></li>
+  				<li>set the line-height to be the height of the div</li>
+  				<li>set <code>vertical-align:middle</code></li>
+  			</ol>
+  		</p>
+  	</section>
+  	<section id = 'eg1'>
+  		<div>Hello world!</div>
+  	</section>
+  </body>
+</html>
